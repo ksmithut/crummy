@@ -17,6 +17,9 @@
     "posttest": "npm run check-cov",
     "codeclimate": "cat ./coverage/lcov.info | codeclimate-test-reporter"
   },
+  "engines": {
+    "node": ">=4.x"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ksmithut/crummy.git"
