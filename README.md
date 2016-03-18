@@ -1,5 +1,13 @@
 # `crummy`
 
+
+[![NPM version](http://img.shields.io/npm/v/crummy.svg?style=flat)](https://www.npmjs.org/package/crummy)
+[![Dependency Status](http://img.shields.io/david/ksmithut/crummy.svg?style=flat)](https://david-dm.org/ksmithut/crummy)
+[![Dev Dependency Status](http://img.shields.io/david/dev/ksmithut/crummy.svg?style=flat)](https://david-dm.org/ksmithut/crummy#info=devDependencies&view=table)
+[![Code Climate](http://img.shields.io/codeclimate/github/ksmithut/crummy.svg?style=flat)](https://codeclimate.com/github/ksmithut/crummy)
+[![Build Status](http://img.shields.io/travis/ksmithut/crummy/master.svg?style=flat)](https://travis-ci.org/ksmithut/crummy)
+[![Coverage Status](http://img.shields.io/codeclimate/coverage/github/ksmithut/crummy.svg?style=flat)](https://codeclimate.com/github/ksmithut/crummy)
+
 > **Crummy**
 >
 > A logger's bus. Also an adjective meaning "no good" or "undesirable"
