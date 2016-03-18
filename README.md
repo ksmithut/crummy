@@ -41,7 +41,7 @@ app.use(crummy({
   }
 }))
 app.use((req, res, next) => {
-  req.log.info(req.method, req.path); // Will log the path requested, as well as any default meta data
+  req.log.info(req.method, req.path) // Will log the path requested, as well as any default meta data
 })
 
 // ... routes, other middleware, app.listen(), etc.
@@ -76,6 +76,38 @@ app.use(function *(next) {
 
 // ... other koa setup stuff
 ```
+
+# Usage on your own
+
+This really isn't a lot of code. It just has some sensible defaults. The core
+piece of this module might make more sense if there were different adapters to
+utilize. Below is an example of what this module is doing without actually using
+this module:
+
+```js
+const express = require('express')
+const uuid = require('uuid')
+const log = require('./lib/log')
+
+const app = express()
+
+app.use((req, res, next) => {
+  req.log = log.child({ reqId: uuid.v4() })
+  next()
+})
+
+app.use((req, res, next) => {
+  req.log.info(req.method, res.path)
+})
+
+// ... routes, other middleware, app.listen(), etc.
+```
+
+After reading that, you will probably just opt to just roll your own, which is
+totally fine. I wrote this because I don't like to have any miscellaneous
+modules lying around. I like most of my middleware stack to be declarative. For
+what it's worth, there are tests around the functionality described above, which
+might be a bit overkill.
 
 [logger-terms]: http://pacificforestfoundation.org/glossary.html
 [bunyan]: https://github.com/trentm/node-bunyan

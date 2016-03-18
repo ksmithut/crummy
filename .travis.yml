@@ -1,0 +1,10 @@
+sudo: false
+language: node_js
+os:
+  - linux
+node_js:
+  - stable
+  - "4"
+env:
+  - secure: OlCCVWIia2PFftSppn1iYXFSojz4Y1zSxaTk44j80lFRNzwdOWPm6DxSuMnCCqU2Zt62TKJTa5ijkeqToXnljHZC502bdLRg4OjPMr2caNM6QMDllHFw5wrjqTlqaMib2xqKo2jtt0ocdRZ6GbfCvyaL0WUBaI0fZgZq2NKG57mjQcqw0WmVULDYy1HYSoIkouL5Q1NlGY+yHXnZpCYU2zLKc/1/2Wyy+nEVN+8g3YGLfLk+KB5lJgqlOfIx2okcUTY3WT9zEoDc09xRIAIjkSBrnsLaOGppICnz+AnHK4g6rVcuM7u214Vg2jdjPFLOQMfXg+nNlZZe6Mpgadx1talOtJBhe39drfwxhaWXhQZ7LUnwojs2C/xxN2hgKygPSCoWZoV0wzIJKy0p1b7y/K54/1Ph8DNWrhAOd7WoMfKi4uIRcb2iFQWFzuSjPC4B2zOoB62Rp99cVeV70dPt+krgnrUe3JHmUpwVa52daUzPH88m/Ehgs2aE1CuhR19zji1GHx2p4cGjwIrSymgpcIVU6RBU6e9V99VavP6QhtZ5UaKJdNB9S0rI5b+eJ4L9gf7THb//WXfsuewwGnmytMsbKI/woXiMJ/HQX9nGKREFUrKokIIa5dIPvJl7Tqp9nTbZ/h/onqWZeBiudDqhLDOduyIuuWDRzXM8xq/wz+M=
+after_success: npm run codeclimate

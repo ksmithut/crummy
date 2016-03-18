@@ -1,0 +1,56 @@
+{
+  "name": "crummy",
+  "version": "0.0.0",
+  "description": "A middleware to simply attach a logger to the request context of your http server of choice",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "express.js",
+    "koa.js",
+    "LICENSE"
+  ],
+  "scripts": {
+    "lint": "eslint . --ignore-path .gitignore",
+    "check-cov": "istanbul check-coverage --statements 100 --functions 100 --branches 100 --lines 100",
+    "pretest": "npm run lint",
+    "test": "istanbul cover _mocha",
+    "posttest": "npm run check-cov",
+    "codeclimate": "cat ./coverage/lcov.info | codeclimate-test-reporter"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksmithut/crummy.git"
+  },
+  "keywords": [
+    "bunyan",
+    "logger",
+    "middleware"
+  ],
+  "author": "ksmithut",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ksmithut/crummy/issues"
+  },
+  "homepage": "https://github.com/ksmithut/crummy#readme",
+  "devDependencies": {
+    "bunyan": "^1.8.0",
+    "chai": "^3.5.0",
+    "chai-as-promised": "^5.2.0",
+    "chai-spies": "^0.7.1",
+    "codeclimate-test-reporter": "^0.3.1",
+    "eslint": "^2.4.0",
+    "eslint-config-ksmithut": "^2.0.7",
+    "eslint-plugin-mocha": "^2.0.0",
+    "espree": "^3.1.2",
+    "express": "^4.13.4",
+    "hapi": "^13.2.1",
+    "istanbul": "^0.4.2",
+    "koa": "^1.2.0",
+    "mocha": "^2.4.5",
+    "mocha-lcov-reporter": "^1.2.0",
+    "restify": "^4.0.4",
+    "supertest": "^1.2.0",
+    "supertest-as-promised": "^3.0.0",
+    "supertest-koa-agent": "^0.2.1"
+  }
+}
